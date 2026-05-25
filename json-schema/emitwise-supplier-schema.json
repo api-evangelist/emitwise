@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/emitwise/main/json-schema/emitwise-supplier-schema.json",
+  "title": "Emitwise Supplier",
+  "description": "An aggregated supplier record in the Emitwise platform. Suppliers are automatically identified from spend data and used to calculate Scope 3 supply-chain emissions.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "totalSpend": {
+      "type": "number",
+      "description": "Total spend with this supplier across the reporting period."
+    },
+    "currency": { "type": "string" },
+    "emissions": {
+      "type": "object",
+      "properties": {
+        "scope3": {
+          "type": "number",
+          "description": "Scope 3 supplier emissions in kgCO2e."
+        },
+        "unit": { "type": "string", "examples": ["kgCO2e"] }
+      }
+    }
+  },
+  "required": ["id", "name"]
+}

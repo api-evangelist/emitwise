@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "ew": "https://emitwise.com/ns#",
+    "Facility": "schema:Place",
+    "Project": "schema:Project",
+    "Supplier": "schema:Organization",
+    "File": "schema:DigitalDocument",
+    "Schema": "ew:Schema",
+    "id": "@id",
+    "name": "schema:name",
+    "description": "schema:description",
+    "type": "@type",
+    "location": "schema:location",
+    "country": "schema:addressCountry",
+    "totalSpend": "ew:totalSpend",
+    "currency": "schema:priceCurrency",
+    "emissions": "ew:emissions",
+    "scope3": "ew:scope3Emissions",
+    "unit": "ew:emissionsUnit",
+    "uploadedAt": {
+      "@id": "schema:dateCreated",
+      "@type": "schema:DateTime"
+    },
+    "status": "ew:status"
+  }
+}

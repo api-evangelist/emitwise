@@ -1,0 +1,104 @@
+aid: emitwise
+name: Emitwise
+description: >-
+  Emitwise is a London-based carbon accounting and Scope 3 reporting platform
+  that uses AI to help large enterprises measure, manage, and reduce their
+  product carbon footprint (PCF) and supply-chain greenhouse-gas emissions.
+  The platform ingests spend data, activity data, and supplier information,
+  auto-classifies suppliers, and produces audit-ready emissions reporting
+  aligned with the GHG Protocol (Scope 1, 2, and 3) and frameworks such as
+  CDP and CSRD. The Emitwise developer API at api.emitwise.com exposes
+  facilities, projects, activity-data files, schema metadata, and aggregated
+  supplier emissions data so customers can integrate carbon accounting into
+  procurement, ERP, and sustainability reporting systems. Access is granted
+  per-customer through Emitwise CSMs; API keys are generated from the Company
+  settings area of the dashboard. In July 2025, Emitwise was acquired by
+  Green Project Technologies; the Emitwise platform and team are now part of
+  Green Project's end-to-end decarbonization solutions, while the existing
+  Emitwise developer portal and API endpoints remain live for customers.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Carbon Accounting
+  - Greenhouse Gas
+  - Scope 3
+  - Supply Chain Emissions
+  - Product Carbon Footprint
+  - Sustainability
+  - ESG
+  - CDP
+  - CSRD
+  - GHG Protocol
+  - Climate
+  - Procurement
+  - AI
+url: https://raw.githubusercontent.com/api-evangelist/emitwise/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: emitwise:emitwise-api
+    name: Emitwise API
+    description: >-
+      The Emitwise REST API at api.emitwise.com lets enterprise customers
+      manage facilities, sustainability projects, activity-data file uploads,
+      schema metadata, and aggregated supplier (Scope 3) emissions. The API
+      is documented at docs.emitwise.com, uses bearer authentication with
+      customer-generated API keys, and is accessed by request through an
+      Emitwise customer success manager.
+    humanURL: https://docs.emitwise.com/
+    tags:
+      - Carbon Accounting
+      - Scope 3
+      - Suppliers
+      - Facilities
+      - Files
+    properties:
+      - type: Documentation
+        url: https://docs.emitwise.com/
+      - type: Documentation
+        url: https://docs.emitwise.com/v1
+      - type: Authentication
+        url: https://docs.emitwise.com/#authentication
+      - type: SignUp
+        url: https://docs.emitwise.com/#requesting-access
+      - type: OpenAPI
+        url: openapi/emitwise-api-openapi.yml
+      - type: JSONSchema
+        url: json-schema/emitwise-facility-schema.json
+      - type: JSONSchema
+        url: json-schema/emitwise-supplier-schema.json
+      - type: JSONLD
+        url: json-ld/emitwise-context.jsonld
+common:
+  - type: Website
+    url: https://emitwise.com/
+  - type: Documentation
+    url: https://docs.emitwise.com/
+  - type: APIPortal
+    url: https://docs.emitwise.com/
+  - type: Dashboard
+    url: https://dash.emitwise.com/
+  - type: PCFCalculator
+    url: https://emitwise.com/pcf-calculator/
+  - type: Solution
+    url: https://emitwise.com/solutions/procurewise-supply-chain-emissions/
+  - type: Privacy
+    url: https://emitwise.com/privacy/
+  - type: TermsOfService
+    url: https://emitwise.com/terms/
+  - type: CookiePolicy
+    url: https://emitwise.com/cookie-policy/
+  - type: Blog
+    url: https://emitwise.com/home/feed/
+  - type: ParentCompany
+    url: https://www.greenprojecttech.com/
+  - type: Contact
+    url: https://www.greenprojecttech.com/contact/get-in-touch
+  - type: GitHub
+    url: https://github.com/emitwise
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

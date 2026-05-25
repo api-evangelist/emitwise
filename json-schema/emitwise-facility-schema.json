@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/emitwise/main/json-schema/emitwise-facility-schema.json",
+  "title": "Emitwise Facility",
+  "description": "A facility tracked in the Emitwise carbon accounting platform. Facilities are physical or virtual locations (offices, factories, business units) used to group emissions data.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": {
+      "type": "string",
+      "description": "Physical or virtual classification (e.g. office, factory, business unit)."
+    },
+    "location": { "type": "string" },
+    "country": { "type": "string" }
+  },
+  "required": ["id", "name"]
+}
