@@ -1,0 +1,164 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Emitwise API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Facilities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Facilities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/facilities"
+          },
+          "docs": "List all facilities (offices, factories, business units) tracked in the customer's Emitwise account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/projects"
+          },
+          "docs": "List all sustainability projects associated with the customer's organization."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Schema",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Activity Data Schema",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/schema"
+          },
+          "docs": "Retrieve the schema definition used to validate uploaded activity data files."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/files"
+          },
+          "docs": "List previously uploaded activity-data files."
+        },
+        {
+          "info": {
+            "name": "Upload Activity Data File",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.emitwise.com/v1/files",
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "facilityId",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "projectId",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a tabular activity-data file (matching the active schema) so emissions can be calculated."
+        },
+        {
+          "info": {
+            "name": "Get File",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/files/:fileId",
+            "params": [
+              {
+                "name": "fileId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve details and processing status for a previously uploaded file."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Suppliers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Suppliers (Paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.emitwise.com/v1/suppliers/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve aggregated supplier emissions data with pagination and filtering. Suppliers are automatically identified from spend data uploaded by the customer."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
