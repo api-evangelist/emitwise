@@ -62,7 +62,7 @@ apis:
         url: https://docs.emitwise.com/v1
       - type: Authentication
         url: https://docs.emitwise.com/#authentication
-      - type: SignUp
+      - type: Signup
         url: https://docs.emitwise.com/#requesting-access
       - type: OpenAPI
         url: openapi/emitwise-api-openapi.yml
@@ -83,7 +83,7 @@ common:
     url: https://dash.emitwise.com/
   - type: PCFCalculator
     url: https://emitwise.com/pcf-calculator/
-  - type: Solution
+  - type: Solutions
     url: https://emitwise.com/solutions/procurewise-supply-chain-emissions/
   - type: Privacy
     url: https://emitwise.com/privacy/
