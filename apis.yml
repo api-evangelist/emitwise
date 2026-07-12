@@ -73,6 +73,10 @@ apis:
       - type: JSONLD
         url: json-ld/emitwise-context.jsonld
 common:
+  - type: DomainSecurity
+    url: security/emitwise-domain-security.yml
+  - type: Authentication
+    url: authentication/emitwise-authentication.yml
   - type: Website
     url: https://emitwise.com/
   - type: Documentation
