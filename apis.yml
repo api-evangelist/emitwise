@@ -73,6 +73,8 @@ apis:
       - type: JSONLD
         url: json-ld/emitwise-context.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/emitwise-agentic-access.yml
   - type: DomainSecurity
     url: security/emitwise-domain-security.yml
   - type: Authentication
