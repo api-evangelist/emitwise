@@ -1,0 +1,116 @@
+openapi: 3.0.3
+info:
+  title: Emitwise Facilities Suppliers API
+  version: v1
+  description: 'The Emitwise API allows customers to interact with the Emitwise carbon
+
+    accounting platform programmatically. The API exposes facilities, projects,
+
+    schema metadata, file uploads of activity data, and aggregated supplier
+
+    emissions data so customers can integrate Scope 1, 2, and 3 emissions
+
+    measurement and product carbon footprint (PCF) workflows into their own
+
+    systems.
+
+
+    Access requires an Emitwise customer account; new API keys are created from
+
+    the Company settings area of the dashboard and presented to the API as
+
+    bearer credentials. As of July 2025, Emitwise has been acquired by Green
+
+    Project Technologies; the API and developer portal remain live at
+
+    api.emitwise.com and docs.emitwise.com while the platform is integrated
+
+    into Green Project''s broader decarbonization product.
+
+    '
+  contact:
+    name: Emitwise (Green Project Technologies)
+    url: https://docs.emitwise.com/
+  license:
+    name: Proprietary
+servers:
+- url: https://api.emitwise.com/v1
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Suppliers
+  description: Aggregated Scope 3 supplier emissions data.
+paths:
+  /suppliers/list:
+    post:
+      tags:
+      - Suppliers
+      summary: List Suppliers (Paginated)
+      description: Retrieve aggregated supplier emissions data with pagination and filtering. Suppliers are automatically identified from spend data uploaded by the customer.
+      operationId: listSuppliers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  minimum: 1
+                pageSize:
+                  type: integer
+                  minimum: 1
+                  maximum: 200
+                filters:
+                  type: object
+                  additionalProperties: true
+      responses:
+        '200':
+          description: A paginated supplier list with aggregated emissions.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Supplier'
+                  page:
+                    type: integer
+                  pageSize:
+                    type: integer
+                  total:
+                    type: integer
+components:
+  schemas:
+    Supplier:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        totalSpend:
+          type: number
+          description: Total spend with this supplier across the reporting period.
+        currency:
+          type: string
+        emissions:
+          type: object
+          properties:
+            scope3:
+              type: number
+              description: Scope 3 supplier emissions in kgCO2e.
+            unit:
+              type: string
+              example: kgCO2e
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Emitwise API key generated from Company settings, presented as a Bearer token.

@@ -1,0 +1,81 @@
+openapi: 3.0.3
+info:
+  title: Emitwise Facilities API
+  version: v1
+  description: 'The Emitwise API allows customers to interact with the Emitwise carbon
+
+    accounting platform programmatically. The API exposes facilities, projects,
+
+    schema metadata, file uploads of activity data, and aggregated supplier
+
+    emissions data so customers can integrate Scope 1, 2, and 3 emissions
+
+    measurement and product carbon footprint (PCF) workflows into their own
+
+    systems.
+
+
+    Access requires an Emitwise customer account; new API keys are created from
+
+    the Company settings area of the dashboard and presented to the API as
+
+    bearer credentials. As of July 2025, Emitwise has been acquired by Green
+
+    Project Technologies; the API and developer portal remain live at
+
+    api.emitwise.com and docs.emitwise.com while the platform is integrated
+
+    into Green Project''s broader decarbonization product.
+
+    '
+  contact:
+    name: Emitwise (Green Project Technologies)
+    url: https://docs.emitwise.com/
+  license:
+    name: Proprietary
+servers:
+- url: https://api.emitwise.com/v1
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Facilities
+  description: Physical or virtual locations whose emissions are tracked.
+paths:
+  /facilities:
+    get:
+      tags:
+      - Facilities
+      summary: List Facilities
+      description: List all facilities (offices, factories, business units) tracked in the customer's Emitwise account.
+      operationId: listFacilities
+      responses:
+        '200':
+          description: A paginated list of facilities.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+components:
+  schemas:
+    Facility:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+          description: Physical or virtual classification (e.g. office, factory, business unit).
+        location:
+          type: string
+        country:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Emitwise API key generated from Company settings, presented as a Bearer token.
