@@ -17,9 +17,21 @@ description: >-
   Green Project's end-to-end decarbonization solutions, while the existing
   Emitwise developer portal and API endpoints remain live for customers.
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Provider
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/emitwise.png
 tags:
   - Carbon Accounting
   - Greenhouse Gas
@@ -39,39 +51,121 @@ created: '2026-05-25'
 modified: '2026-05-25'
 specificationVersion: '0.20'
 apis:
-  - aid: emitwise:emitwise-api
-    name: Emitwise API
-    description: >-
-      The Emitwise REST API at api.emitwise.com lets enterprise customers
-      manage facilities, sustainability projects, activity-data file uploads,
-      schema metadata, and aggregated supplier (Scope 3) emissions. The API
-      is documented at docs.emitwise.com, uses bearer authentication with
-      customer-generated API keys, and is accessed by request through an
-      Emitwise customer success manager.
-    humanURL: https://docs.emitwise.com/
-    tags:
-      - Carbon Accounting
-      - Scope 3
-      - Suppliers
-      - Facilities
-      - Files
-    properties:
-      - type: Documentation
-        url: https://docs.emitwise.com/
-      - type: Documentation
-        url: https://docs.emitwise.com/v1
-      - type: Authentication
-        url: https://docs.emitwise.com/#authentication
-      - type: Signup
-        url: https://docs.emitwise.com/#requesting-access
-      - type: OpenAPI
-        url: openapi/emitwise-api-openapi.yml
-      - type: JSONSchema
-        url: json-schema/emitwise-facility-schema.json
-      - type: JSONSchema
-        url: json-schema/emitwise-supplier-schema.json
-      - type: JSONLD
-        url: json-ld/emitwise-context.jsonld
+- aid: emitwise:emitwise-facilities-api
+  name: Emitwise Facilities API
+  description: Physical or virtual locations whose emissions are tracked.
+  humanURL: https://docs.emitwise.com/
+  tags:
+  - Facilities
+  properties:
+  - type: OpenAPI
+    url: openapi/emitwise-facilities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.emitwise.com/
+  - type: Documentation
+    url: https://docs.emitwise.com/v1
+  - type: Authentication
+    url: https://docs.emitwise.com/#authentication
+  - type: Signup
+    url: https://docs.emitwise.com/#requesting-access
+  - type: JSONSchema
+    url: json-schema/emitwise-facility-schema.json
+  - type: JSONSchema
+    url: json-schema/emitwise-supplier-schema.json
+  - type: JSONLD
+    url: json-ld/emitwise-context.jsonld
+- aid: emitwise:emitwise-files-api
+  name: Emitwise Files API
+  description: Activity-data file uploads used to calculate emissions.
+  humanURL: https://docs.emitwise.com/
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/emitwise-files-api-openapi.yml
+  - type: Documentation
+    url: https://docs.emitwise.com/
+  - type: Documentation
+    url: https://docs.emitwise.com/v1
+  - type: Authentication
+    url: https://docs.emitwise.com/#authentication
+  - type: Signup
+    url: https://docs.emitwise.com/#requesting-access
+  - type: JSONSchema
+    url: json-schema/emitwise-facility-schema.json
+  - type: JSONSchema
+    url: json-schema/emitwise-supplier-schema.json
+  - type: JSONLD
+    url: json-ld/emitwise-context.jsonld
+- aid: emitwise:emitwise-projects-api
+  name: Emitwise Projects API
+  description: Sustainability initiatives that group emissions data.
+  humanURL: https://docs.emitwise.com/
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/emitwise-projects-api-openapi.yml
+  - type: Documentation
+    url: https://docs.emitwise.com/
+  - type: Documentation
+    url: https://docs.emitwise.com/v1
+  - type: Authentication
+    url: https://docs.emitwise.com/#authentication
+  - type: Signup
+    url: https://docs.emitwise.com/#requesting-access
+  - type: JSONSchema
+    url: json-schema/emitwise-facility-schema.json
+  - type: JSONSchema
+    url: json-schema/emitwise-supplier-schema.json
+  - type: JSONLD
+    url: json-ld/emitwise-context.jsonld
+- aid: emitwise:emitwise-schema-api
+  name: Emitwise Schema API
+  description: Activity data schema definitions.
+  humanURL: https://docs.emitwise.com/
+  tags:
+  - Schema
+  properties:
+  - type: OpenAPI
+    url: openapi/emitwise-schema-api-openapi.yml
+  - type: Documentation
+    url: https://docs.emitwise.com/
+  - type: Documentation
+    url: https://docs.emitwise.com/v1
+  - type: Authentication
+    url: https://docs.emitwise.com/#authentication
+  - type: Signup
+    url: https://docs.emitwise.com/#requesting-access
+  - type: JSONSchema
+    url: json-schema/emitwise-facility-schema.json
+  - type: JSONSchema
+    url: json-schema/emitwise-supplier-schema.json
+  - type: JSONLD
+    url: json-ld/emitwise-context.jsonld
+- aid: emitwise:emitwise-suppliers-api
+  name: Emitwise Suppliers API
+  description: Aggregated Scope 3 supplier emissions data.
+  humanURL: https://docs.emitwise.com/
+  tags:
+  - Suppliers
+  properties:
+  - type: OpenAPI
+    url: openapi/emitwise-suppliers-api-openapi.yml
+  - type: Documentation
+    url: https://docs.emitwise.com/
+  - type: Documentation
+    url: https://docs.emitwise.com/v1
+  - type: Authentication
+    url: https://docs.emitwise.com/#authentication
+  - type: Signup
+    url: https://docs.emitwise.com/#requesting-access
+  - type: JSONSchema
+    url: json-schema/emitwise-facility-schema.json
+  - type: JSONSchema
+    url: json-schema/emitwise-supplier-schema.json
+  - type: JSONLD
+    url: json-ld/emitwise-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/emitwise-agentic-access.yml
