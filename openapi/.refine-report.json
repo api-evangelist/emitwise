@@ -1,0 +1,22 @@
+{
+  "provider": "emitwise",
+  "sources": [
+    "emitwise-facilities-api-openapi.yml",
+    "emitwise-files-api-openapi.yml",
+    "emitwise-projects-api-openapi.yml",
+    "emitwise-schema-api-openapi.yml",
+    "emitwise-suppliers-api-openapi.yml"
+  ],
+  "outputs": [
+    "emitwise-facilities-api-openapi.yml",
+    "emitwise-files-api-openapi.yml",
+    "emitwise-projects-api-openapi.yml",
+    "emitwise-schema-api-openapi.yml",
+    "emitwise-suppliers-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
