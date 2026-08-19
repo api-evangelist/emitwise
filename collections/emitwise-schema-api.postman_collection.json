@@ -1,0 +1,119 @@
+{
+  "item": [
+    {
+      "id": "0471b104-dcaf-4056-8f2e-b4c8bf45d8c4",
+      "name": "Schema",
+      "description": {
+        "content": "Activity data schema definitions.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "25eb6599-4a0e-4bdf-a3cb-008e709208cc",
+          "name": "Get Activity Data Schema",
+          "request": {
+            "name": "Get Activity Data Schema",
+            "description": {
+              "content": "Retrieve the schema definition used to validate uploaded activity data files.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "schema"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cbf8f7e5-769e-45a6-b0d6-9df936a03165",
+              "name": "The active schema definition.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"version\": \"string\",\n  \"fields\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"required\": false,\n      \"description\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"required\": false,\n      \"description\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.emitwise.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "95bfdb53-5645-4b70-9b42-7196ea8bbf71",
+    "name": "Emitwise Facilities Schema API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Emitwise API allows customers to interact with the Emitwise carbon\naccounting platform programmatically. The API exposes facilities, projects,\nschema metadata, file uploads of activity data, and aggregated supplier\nemissions data so customers can integrate Scope 1, 2, and 3 emissions\nmeasurement and product carbon footprint (PCF) workflows into their own\nsystems.\n\nAccess requires an Emitwise customer account; new API keys are created from\nthe Company settings area of the dashboard and presented to the API as\nbearer credentials. As of July 2025, Emitwise has been acquired by Green\nProject Technologies; the API and developer portal remain live at\napi.emitwise.com and docs.emitwise.com while the platform is integrated\ninto Green Project's broader decarbonization product.\n\n\nContact Support:\n Name: Emitwise (Green Project Technologies)",
+      "type": "text/plain"
+    }
+  }
+}

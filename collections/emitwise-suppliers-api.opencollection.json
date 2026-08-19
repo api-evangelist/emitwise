@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Emitwise Facilities Suppliers API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Suppliers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Suppliers (Paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.emitwise.com/v1/suppliers/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve aggregated supplier emissions data with pagination and filtering. Suppliers are automatically identified from spend data uploaded by the customer."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

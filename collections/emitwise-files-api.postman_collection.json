@@ -1,0 +1,350 @@
+{
+  "item": [
+    {
+      "id": "e5b56c49-55c3-4faa-bbd3-f86896692adf",
+      "name": "Files",
+      "description": {
+        "content": "Activity-data file uploads used to calculate emissions.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "733bb935-707e-425c-aa03-e2612facdfe8",
+          "name": "Upload Activity Data File",
+          "request": {
+            "name": "Upload Activity Data File",
+            "description": {
+              "content": "Upload a tabular activity-data file (matching the active schema) so emissions can be calculated.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "The tabular activity-data file (CSV or similar)."
+                },
+                {
+                  "key": "facilityId",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Optional facility the file applies to."
+                },
+                {
+                  "key": "projectId",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Optional project the file applies to."
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e6adcbfb-9124-49f6-b638-5dee895420fc",
+              "name": "File accepted for processing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "The tabular activity-data file (CSV or similar).",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Optional facility the file applies to.",
+                        "type": "text/plain"
+                      },
+                      "key": "facilityId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Optional project the file applies to.",
+                        "type": "text/plain"
+                      },
+                      "key": "projectId",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"filename\": \"string\",\n  \"status\": \"processed\",\n  \"uploadedAt\": \"1965-07-16T12:25:07.017Z\",\n  \"facilityId\": \"string\",\n  \"projectId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d96a5d53-5e9e-4386-b828-48e31d25d116",
+          "name": "List Files",
+          "request": {
+            "name": "List Files",
+            "description": {
+              "content": "List previously uploaded activity-data files.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "195ee54a-46ea-4f9f-ac83-085131cd4fea",
+              "name": "A list of uploaded files.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"filename\": \"string\",\n    \"status\": \"processed\",\n    \"uploadedAt\": \"1998-06-17T17:50:24.040Z\",\n    \"facilityId\": \"string\",\n    \"projectId\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"filename\": \"string\",\n    \"status\": \"uploaded\",\n    \"uploadedAt\": \"1966-03-09T09:48:58.522Z\",\n    \"facilityId\": \"string\",\n    \"projectId\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aefdf7aa-a087-44be-b2fc-59df9a036533",
+          "name": "Get File",
+          "request": {
+            "name": "Get File",
+            "description": {
+              "content": "Retrieve details and processing status for a previously uploaded file.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "files",
+                ":fileId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fileId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "031e4df9-b619-4abb-af2d-e643ab3c425b",
+              "name": "File details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files",
+                    ":fileId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fileId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"filename\": \"string\",\n  \"status\": \"processed\",\n  \"uploadedAt\": \"1965-07-16T12:25:07.017Z\",\n  \"facilityId\": \"string\",\n  \"projectId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.emitwise.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "fdf74728-84e7-450c-88e8-6a966c39ce9d",
+    "name": "Emitwise Facilities Files API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Emitwise API allows customers to interact with the Emitwise carbon\naccounting platform programmatically. The API exposes facilities, projects,\nschema metadata, file uploads of activity data, and aggregated supplier\nemissions data so customers can integrate Scope 1, 2, and 3 emissions\nmeasurement and product carbon footprint (PCF) workflows into their own\nsystems.\n\nAccess requires an Emitwise customer account; new API keys are created from\nthe Company settings area of the dashboard and presented to the API as\nbearer credentials. As of July 2025, Emitwise has been acquired by Green\nProject Technologies; the API and developer portal remain live at\napi.emitwise.com and docs.emitwise.com while the platform is integrated\ninto Green Project's broader decarbonization product.\n\n\nContact Support:\n Name: Emitwise (Green Project Technologies)",
+      "type": "text/plain"
+    }
+  }
+}

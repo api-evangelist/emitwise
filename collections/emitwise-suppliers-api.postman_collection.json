@@ -1,0 +1,142 @@
+{
+  "item": [
+    {
+      "id": "29314a6b-5f34-4c45-a3c1-6338a0a25066",
+      "name": "Suppliers",
+      "description": {
+        "content": "Aggregated Scope 3 supplier emissions data.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f3620ea0-cc46-4a8b-abd1-2037eafd10d1",
+          "name": "List Suppliers (Paginated)",
+          "request": {
+            "name": "List Suppliers (Paginated)",
+            "description": {
+              "content": "Retrieve aggregated supplier emissions data with pagination and filtering. Suppliers are automatically identified from spend data uploaded by the customer.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "suppliers",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page\": \"<integer>\",\n  \"pageSize\": \"<integer>\",\n  \"filters\": {\n    \"key_0\": true,\n    \"key_1\": 9973,\n    \"key_2\": \"string\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c3bf117e-f428-4244-820a-53ef07354015",
+              "name": "A paginated supplier list with aggregated emissions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "suppliers",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page\": \"<integer>\",\n  \"pageSize\": \"<integer>\",\n  \"filters\": {\n    \"key_0\": false,\n    \"key_1\": false\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalSpend\": 1735.2428239041706,\n      \"currency\": \"string\",\n      \"emissions\": {\n        \"scope3\": 3904.1391618547736,\n        \"unit\": \"kgCO2e\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalSpend\": 2393.308291954587,\n      \"currency\": \"string\",\n      \"emissions\": {\n        \"scope3\": 3682.122632769811,\n        \"unit\": \"kgCO2e\"\n      }\n    }\n  ],\n  \"page\": 5530,\n  \"pageSize\": 7404,\n  \"total\": 8420\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.emitwise.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "55447ce2-840b-4bb4-8018-54705e2ef34b",
+    "name": "Emitwise Facilities Suppliers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Emitwise API allows customers to interact with the Emitwise carbon\naccounting platform programmatically. The API exposes facilities, projects,\nschema metadata, file uploads of activity data, and aggregated supplier\nemissions data so customers can integrate Scope 1, 2, and 3 emissions\nmeasurement and product carbon footprint (PCF) workflows into their own\nsystems.\n\nAccess requires an Emitwise customer account; new API keys are created from\nthe Company settings area of the dashboard and presented to the API as\nbearer credentials. As of July 2025, Emitwise has been acquired by Green\nProject Technologies; the API and developer portal remain live at\napi.emitwise.com and docs.emitwise.com while the platform is integrated\ninto Green Project's broader decarbonization product.\n\n\nContact Support:\n Name: Emitwise (Green Project Technologies)",
+      "type": "text/plain"
+    }
+  }
+}

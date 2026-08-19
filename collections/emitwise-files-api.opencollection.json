@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Emitwise Facilities Files API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/files"
+          },
+          "docs": "List previously uploaded activity-data files."
+        },
+        {
+          "info": {
+            "name": "Upload Activity Data File",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.emitwise.com/v1/files",
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "facilityId",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "projectId",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a tabular activity-data file (matching the active schema) so emissions can be calculated."
+        },
+        {
+          "info": {
+            "name": "Get File",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.emitwise.com/v1/files/:fileId",
+            "params": [
+              {
+                "name": "fileId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve details and processing status for a previously uploaded file."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

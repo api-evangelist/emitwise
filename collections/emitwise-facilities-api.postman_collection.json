@@ -1,0 +1,119 @@
+{
+  "item": [
+    {
+      "id": "c3f15055-73a7-45b2-9e4d-c3b6cc766988",
+      "name": "Facilities",
+      "description": {
+        "content": "Physical or virtual locations whose emissions are tracked.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ce7db54-9789-4dfb-b153-7f03b3402fdd",
+          "name": "List Facilities",
+          "request": {
+            "name": "List Facilities",
+            "description": {
+              "content": "List all facilities (offices, factories, business units) tracked in the customer's Emitwise account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3930eeb8-c88c-434e-b61f-73962196ab42",
+              "name": "A paginated list of facilities.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "facilities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"location\": \"string\",\n    \"country\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"location\": \"string\",\n    \"country\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.emitwise.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "57c20e2a-36a9-4c65-846e-df1a0e3a94d4",
+    "name": "Emitwise Facilities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Emitwise API allows customers to interact with the Emitwise carbon\naccounting platform programmatically. The API exposes facilities, projects,\nschema metadata, file uploads of activity data, and aggregated supplier\nemissions data so customers can integrate Scope 1, 2, and 3 emissions\nmeasurement and product carbon footprint (PCF) workflows into their own\nsystems.\n\nAccess requires an Emitwise customer account; new API keys are created from\nthe Company settings area of the dashboard and presented to the API as\nbearer credentials. As of July 2025, Emitwise has been acquired by Green\nProject Technologies; the API and developer portal remain live at\napi.emitwise.com and docs.emitwise.com while the platform is integrated\ninto Green Project's broader decarbonization product.\n\n\nContact Support:\n Name: Emitwise (Green Project Technologies)",
+      "type": "text/plain"
+    }
+  }
+}
