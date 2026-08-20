@@ -45,6 +45,20 @@ tags:
   - GHG Protocol
   - Climate
   - Procurement
+  - Artificial Intelligence
+tags_raw:
+  - Carbon Accounting
+  - Greenhouse Gas
+  - Scope 3
+  - Supply Chain Emissions
+  - Product Carbon Footprint
+  - Sustainability
+  - ESG
+  - CDP
+  - CSRD
+  - GHG Protocol
+  - Climate
+  - Procurement
   - AI
 url: https://raw.githubusercontent.com/api-evangelist/emitwise/refs/heads/main/apis.yml
 created: '2026-05-25'
@@ -79,6 +93,8 @@ apis:
   description: Activity-data file uploads used to calculate emissions.
   humanURL: https://docs.emitwise.com/
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -102,6 +118,8 @@ apis:
   description: Sustainability initiatives that group emissions data.
   humanURL: https://docs.emitwise.com/
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
