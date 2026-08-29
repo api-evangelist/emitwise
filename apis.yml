@@ -17,6 +17,18 @@ description: >-
   Green Project's end-to-end decarbonization solutions, while the existing
   Emitwise developer portal and API endpoints remain live for customers.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
