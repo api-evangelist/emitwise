@@ -1,11 +1,7 @@
 {
   "provider": "emitwise",
   "sources": [
-    "emitwise-facilities-api-openapi.yml",
-    "emitwise-files-api-openapi.yml",
-    "emitwise-projects-api-openapi.yml",
-    "emitwise-schema-api-openapi.yml",
-    "emitwise-suppliers-api-openapi.yml"
+    "_original/emitwise-api-openapi.yml"
   ],
   "outputs": [
     "emitwise-facilities-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "emitwise-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "emitwise-facilities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "emitwise-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "emitwise-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "emitwise-schema-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "emitwise-suppliers-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
