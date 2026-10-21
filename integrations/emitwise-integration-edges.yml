@@ -1,0 +1,50 @@
+edges:
+- partner_name: CDP (Accredited Solutions Provider programme)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cdp.net/en/partners/emitwise
+  category: CDP disclosure accredited solutions provider
+  contract_reference:
+    register: CDP Accredited Solutions Providers (cdp.net/en/find-accredited-solutions-providers + partner pages)
+    standard: CDP disclosure (CDP Accredited Solutions Provider programme)
+    spec_file: null
+    role: cdp-accredited-solutions-provider
+    registered_name: Emitwise
+    register_id: https://www.cdp.net/en/partners/emitwise
+    partner_tier: gold
+    register_statement: A global gold software solutions provider
+    matched_domain: emitwise.com
+    matched_by: domain
+    matched_via: contact-email domain on the ASP page (the page links no website)
+    certified_products:
+    - product: CDP Accredited Solutions Provider (software)
+      product_type: CDP ASP software
+      lapsed: true
+      lapsed_note: partner page still in the cdp.net sitemap but not on the current ASP browse list
+    signal_note: certified_products = one entry per accredited service type (software / consultancy / renewable
+      energy), never per product; partner_tier is the CDP accreditation level; verification ASPs are assessors and
+      are held
+    detected_by: sweep-carbon-accounting-sbti-pcaf.py
+    detected: '2026-10-21'
+  detected_by: sweep-carbon-accounting-sbti-pcaf.py
+  first_seen: '2026-10-21'
+generated: '2026-10-21'
+method: searched
+source:
+- https://sciencebasedtargets.org/target-dashboard
+- https://files.sciencebasedtargets.org/production/files/companies-excel.xlsx
+- https://carbonaccountingfinancials.com/en/signatories
+- https://www.cdp.net/en/find-accredited-solutions-providers
+- https://ghgprotocol.org/tools-built-ghg-protocol
+- https://ghgprotocol.org/built-ghg-protocol
+checked:
+- https://carbonaccountingfinancials.com/en/signatories
+- https://files.sciencebasedtargets.org/production/files/companies-excel.xlsx
+- https://ghgprotocol.org/built-ghg-protocol
+- https://ghgprotocol.org/tools-built-ghg-protocol
+- https://sciencebasedtargets.org/target-dashboard
+- https://www.cdp.net/en/find-accredited-solutions-providers
