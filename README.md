@@ -1,4 +1,4 @@
-# Emitwise (emitwise)
+# Emitwise
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,81 +66,125 @@
 
 Emitwise is a London-based carbon accounting and Scope 3 reporting platform that uses AI to help large enterprises measure, manage, and reduce their product carbon footprint (PCF) and supply-chain greenhouse-gas emissions. The platform ingests spend data, activity data, and supplier information, auto-classifies suppliers, and produces audit-ready emissions reporting aligned with the GHG Protocol (Scope 1, 2, and 3) and frameworks such as CDP and CSRD. The Emitwise developer API at api.emitwise.com exposes facilities, projects, activity-data files, schema metadata, and aggregated supplier emissions data so customers can integrate carbon accounting into procurement, ERP, and sustainability reporting systems. Access is granted per-customer through Emitwise CSMs; API keys are generated from the Company settings area of the dashboard. In July 2025, Emitwise was acquired by Green Project Technologies; the Emitwise platform and team are now part of Green Project's end-to-end decarbonization solutions, while the existing Emitwise developer portal and API endpoints remain live for customers.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/emitwise/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/emitwise/refs/heads/main/apis.yml)
+**Areas:** Carbon Accounting · Greenhouse Gas · Scope 3 · Supply Chain Emissions · Product Carbon Footprint · Sustainability · ESG · CDP · CSRD · GHG Protocol · Climate · Procurement
 
-## Scope
+## Emitwise on APIs.io
 
-- **Type:** Index
-- **Position:** Provider
-- **Access:** 3rd-Party
+Everything profiled for Emitwise is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/emitwise/](https://apis.io/providers/emitwise/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Carbon Accounting
-- Greenhouse Gas
-- Scope 3
-- Supply Chain Emissions
-- Product Carbon Footprint
-- Sustainability
-- ESG
-- CDP
-- CSRD
-- GHG Protocol
-- Climate
-- Procurement
-- AI
+- [Emitwise Facilities API](https://apis.io/apis/emitwise/emitwise-facilities-api/) — Physical or virtual locations whose emissions are tracked.
+- [Emitwise Files API](https://apis.io/apis/emitwise/emitwise-files-api/) — Activity-data file uploads used to calculate emissions.
+- [Emitwise Projects API](https://apis.io/apis/emitwise/emitwise-projects-api/) — Sustainability initiatives that group emissions data.
+- [Emitwise Schema API](https://apis.io/apis/emitwise/emitwise-schema-api/) — Activity data schema definitions.
+- [Emitwise Suppliers API](https://apis.io/apis/emitwise/emitwise-suppliers-api/) — Aggregated Scope 3 supplier emissions data.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Emitwise API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Emitwise REST API at api.emitwise.com lets enterprise customers manage facilities, sustainability projects, activity-data file uploads, schema metadata, and aggregated supplier (Scope 3) emissions. The API is documented at docs.emitwise.com, uses bearer authentication with customer-generated API keys, and is accessed by request through an Emitwise customer success manager.
+- [Emitwise Agentic Access](https://apis.io/agentic-access/emitwise/emitwise-agentic-access/)
 
-- **Human URL:** [https://docs.emitwise.com/](https://docs.emitwise.com/)
+#### JSON Schema (2)
 
-#### Tags
+The data models the API reads and writes.
 
-- Carbon Accounting
-- Scope 3
-- Suppliers
-- Facilities
-- Files
+- [Emitwise Facility](https://apis.io/schemas/emitwise/emitwise-facility/)
+- [Emitwise Supplier](https://apis.io/schemas/emitwise/emitwise-supplier/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://docs.emitwise.com/)
-- [Documentation](https://docs.emitwise.com/v1)
-- [Authentication](https://docs.emitwise.com/#authentication)
-- [Sign Up](https://docs.emitwise.com/#requesting-access)
-- [OpenAPI](openapi/emitwise-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/emitwise-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/emitwise-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/emitwise-facility-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/emitwise-supplier-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/emitwise-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [Emitwise Context](https://apis.io/jsonld/emitwise/emitwise-context/)
+
+#### Collections (6)
+
+Postman and Open Collection request collections.
+
+- [Emitwise API](https://apis.io/collections/emitwise/open-emitwise-api/)
+- [Emitwise Facilities API](https://apis.io/collections/emitwise/open-emitwise-facilities-api/)
+- [Emitwise Facilities Files API](https://apis.io/collections/emitwise/open-emitwise-files-api/)
+- [Emitwise Facilities Projects API](https://apis.io/collections/emitwise/open-emitwise-projects-api/)
+- [Emitwise Facilities Schema API](https://apis.io/collections/emitwise/open-emitwise-schema-api/)
+- [Emitwise Facilities Suppliers API](https://apis.io/collections/emitwise/open-emitwise-suppliers-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Emitwise — jsonschema rules](https://apis.io/rules/emitwise/emitwise-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Emitwise Authentication](https://apis.io/security/emitwise/emitwise-authentication/)
+- [Emitwise Domain Security](https://apis.io/security/emitwise/emitwise-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://emitwise.com/)
 - [Documentation](https://docs.emitwise.com/)
-- [A P I Portal](https://docs.emitwise.com/)
-- [Dashboard](https://dash.emitwise.com/)
-- [P C F Calculator](https://emitwise.com/pcf-calculator/)
-- [Solution](https://emitwise.com/solutions/procurewise-supply-chain-emissions/)
-- [Privacy](https://emitwise.com/privacy/)
-- [Terms of Service](https://emitwise.com/terms/)
-- [Cookie Policy](https://emitwise.com/cookie-policy/)
 - [Blog](https://emitwise.com/home/feed/)
-- [Parent Company](https://www.greenprojecttech.com/)
-- [Contact](https://www.greenprojecttech.com/contact/get-in-touch)
-- [Git Hub](https://github.com/emitwise)
+- [Terms of service](https://emitwise.com/terms/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 33.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 59.3 |
+| Contract governance | 9.8 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 17.9 |
+| Access clarity | 34.2 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.2** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/emitwise/](https://apis.io/providers/emitwise/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Emitwise: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/emitwise/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
